@@ -11,7 +11,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
@@ -30,6 +30,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { UserDataComponent } from './components/user-data/user-data.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+// import { DeviceDetectorService } from 'ngx-device-detector';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     LoginPageComponent,
     UserDataComponent,
     CreateAccountComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,9 +66,10 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    // DeviceDetectorService,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
