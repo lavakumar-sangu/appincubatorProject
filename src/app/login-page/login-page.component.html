@@ -1,0 +1,64 @@
+    <head>
+        <title>Cerina Log-In Page</title>
+    </head>
+    <body class="body">
+
+        <header class="logo">
+            <h1 id="CS"><img src="https://www.cerinastudio.com/wp-content/uploads/2020/01/header_logo.png"></h1>
+        </header>    
+
+        <div class="row">
+            <div class="col container item-1"> 
+                <p id="hcontent">Build your bot without any coding.</p>
+            </div>
+
+            <div class="col container item-2">
+                <form class="mainCS" name="myform">
+                    <div style="text-align: center;">
+                        <fa-icon [icon]="faLock" class="fa-3x"></fa-icon> 
+                   </div>
+                                      
+                    <!-- <label for="username"></label> 
+                    <input class="form-control" id="username" type="text" name="username" placeholder="Username" [(ngModel)]="usernameData" formControlName="username" >
+                    <br><br> -->
+
+                    <mat-form-field id="username" appearance="fill" [hideRequiredMarker]="hideRequiredMarker">
+                        <mat-label>Username</mat-label>
+                        <input type="text" matInput [formControl]="username" required placeholder="Ex. James" autofocus maxlength="10">
+                        <mat-error *ngIf="username.hasError('required')">
+                          Username is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <br>
+                   
+                    <!-- <label for="password"></label>
+                    <input class="form-control" type="password" id="password" name="password" placeholder="Password" [(ngModel)]="passwordData" formControlName="password">
+                    <br><br> -->
+
+                    <mat-form-field id="password" appearance="fill">
+                        <mat-label>Password</mat-label>
+                        <input [type]="hide ? 'password' : 'text'" matInput [formControl]="password">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        <mat-error *ngIf="password.hasError('required')">
+                          Password is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <br><br>
+   
+                    <button class="btn btn-outline-dark" type="submit" id="login" (click)="login()" ><b>Log In</b></button> 
+                    <br><br>
+   
+                    <!-- <input type="checkbox" name="RememberMe" id="RememberMe">
+                    <label for="RememberMe">Remember Me</label> -->
+                    <a routerLink="/forgotPassword" id="forgotPassword">Forgot Password</a>
+   
+                    <a routerLink="/createAccount" id="createAccount">Create New Account</a>
+                    <br><br> 
+   
+                    <hr>
+                </form>       
+            </div>
+        </div>
+    </body>
